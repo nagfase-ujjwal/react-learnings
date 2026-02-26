@@ -1,0 +1,11 @@
+#heading {
+    color: red;
+}
+
+.heading-container {
+    color: darkmagenta;
+    background-color: cadetblue;
+}
+
+
+/* First precedence of style here goes to ID containers */
