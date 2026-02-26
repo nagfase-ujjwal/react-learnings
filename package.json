@@ -1,0 +1,22 @@
+{
+  "name": "react-learnings",
+  "version": "1.0.0",
+  "description": "This is React Learnings by Ujjwal Nagfase",
+  "keywords": [ ],
+  "homepage": "https://github.com/nagfase-ujjwal/react-learnings#readme",
+  "bugs": {
+    "url": "https://github.com/nagfase-ujjwal/react-learnings/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nagfase-ujjwal/react-learnings.git"
+  },
+  "license": "ISC",
+  "author": "ujjwal nagfase",
+  "type": "commonjs",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  }
+}
+
