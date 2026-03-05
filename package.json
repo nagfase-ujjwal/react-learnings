@@ -2,7 +2,7 @@
   "name": "react-learnings",
   "version": "1.0.0",
   "description": "This is React Learnings by Ujjwal Nagfase",
-  "keywords": [ ],
+  "keywords": [],
   "homepage": "https://github.com/nagfase-ujjwal/react-learnings#readme",
   "bugs": {
     "url": "https://github.com/nagfase-ujjwal/react-learnings/issues"
@@ -17,6 +17,8 @@
   "main": "App.js",
   "scripts": {
     "test": "jest"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.4"
   }
 }
-
