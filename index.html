@@ -17,9 +17,9 @@
     </div>
 
     <!-- CDN -Content Delivery Network -->
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    <script src="App.js"></script>
+    <!-- <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> -->
+    <script type="module" src="App.js"></script>
 </body>
 
 </html>
@@ -27,3 +27,5 @@
 <!-- Now after importing our CDNs via script tag, our project has access to React 18 -->
 <!-- Originally browsers are not able to understand and interpret React, but with the help of CDNs,
 whatever code we write in React will be understood by our browsers -->
+
+<!-- As we have installed the packages for both, we no longer need the CDNs -->

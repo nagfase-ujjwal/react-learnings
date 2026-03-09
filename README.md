@@ -82,3 +82,51 @@
 ## We don't push `node_modules` because, if i have my package.json and package-lock.json i can regenerate my `node_modules` with `npm i`. It will fetch all the listed dependencies and sub-dependencies from the npm registry and create a new `node_modules`.w
 
 <!-- ------------------------------------------------------- -->
+
+# `npm` - installing a package vs `npx` - executing a package
+
+<!-- ------------------------------------------------------- -->
+
+# `npx parcel index.html` ->
+
+## `Parcel` basically goes to the source index.html and builds a `development build` for our app
+
+## The `development build` is then hosted to our `localHost:1234`
+
+<!-- ------------------------------------------------------- -->
+
+# There are two ways we can import `React` and `ReactDom` into our app
+
+## `CDN` -> Importing CDNs using script tag inside our html file - (Not Recommended)
+
+## `NPM` -> Installing React and ReactDom packages from npm registry
+
+<!-- ------------------------------------------------------- -->
+
+# Installing a Package :-
+
+## `npm install -D package_name` -> Installing a Package as a devDependency (Parcel)
+
+## `npm install package_name` -> Installing a Package as a normal dependency (React, ReactDOM)
+
+<!-- ------------------------------------------------------- -->
+
+# `Error`: Browser scripts cannot have imports or exports
+
+## Browser does not understand the import and export keyword, which we use to import react and react-dom packages
+
+## Normal JS does not have imports and exports, that is why we are getting this error
+
+## Browser scripts cannot have imports or exports
+
+## To fix this, we need to tell the browser that this file is not a normal JS/browser file, it is a module, for that we use `type=module`
+
+<!-- <script type=module src="App.js"></script> -->
+
+## Also in React19, `createRoot` API comes `react-dom/client` package, not `react-dom`
+
+## Each child in a list should have a unique 'key' prop
+
+<!-- ------------------------------------------------------- -->
+
+# Now our React and ReactDOM is coming from our node-modules which we installed from npm registry, instead of the CDNs

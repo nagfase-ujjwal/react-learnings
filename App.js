@@ -1,3 +1,5 @@
+import React from "react";
+import { createRoot } from "react-dom/client";
 {
   /* 
   <div id="parent">
@@ -10,20 +12,20 @@
 
 // If we have to create above nested Structure we can do so by the following:-
 const parent = React.createElement("div", { id: "parent" }, [
-  React.createElement("div", { id: "child1" }, [
-    React.createElement("h2", {}, "This is sibling1"),
-    React.createElement("h2", {}, "This is sibling2"),
+  React.createElement("div", { id: "child1", key: "c1" }, [
+    React.createElement("h2", { key: "s1" }, "This is sibling1"),
+    React.createElement("h2", { key: "s2" }, "This is sibling2"),
   ]),
-  React.createElement("div", { id: "child2" }, [
-    React.createElement("h2", {}, "This is sibling 3"),
-    React.createElement("h2", {}, "This is sibling 4"),
+  React.createElement("div", { id: "child2", key: "c2" }, [
+    React.createElement("h2", { key: "s3" }, "This is sibling 3"),
+    React.createElement("h2", { key: "s4" }, "This is sibling 4"),
   ]),
 ]);
 
 // This is written purely in React(behind is basically Javascript), but this is difficult if the code gets larger and larger
 // This is where the JSX components comes into picture
 
-const root1 = ReactDOM.createRoot(document.getElementById("container1"));
+const root1 = createRoot(document.getElementById("container1"));
 
 root1.render(parent);
 
@@ -39,7 +41,7 @@ const heading = React.createElement(
 
 console.log(heading); // heading here acts as an normal JavaScript Object with type h1
 
-const root = ReactDOM.createRoot(document.getElementById("container"));
+const root = createRoot(document.getElementById("container"));
 
 root.render(heading); // This render() method is responsible for taking the heading object,
 // convert it to the heading h1 tag and then put it in the DOM
